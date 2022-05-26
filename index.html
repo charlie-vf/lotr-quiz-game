@@ -8,6 +8,27 @@
     <title>Lord of The Rings Quiz!</title>
 </head>
 <body>
-    
+    <h1 class="heading">Lord of The Rings Quiz</h1>
+    <div class="game-area">
+        <div class="answer-btns btn-group">
+            <button class="btn answer-text" id="answer1"></button>
+            <button class="btn answer-text" id="answer2"></button>
+            <button class="btn answer-text" id="answer3"></button>
+            <button class="btn answer-text" id="answer4"></button>
+        
+            <button id="next" class="btn next-btn hide">Next</button>
+        </div>
+        <div id="counter-area">
+            <p class="question-count">Question no: <span id="answer-no">1</span></p>
+            <p class="score-count">Score: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <div class="results-area">
+        <h2 class="final-score">You scored: <span id=final-score></span>!</h2>
+        <div class="btn-group">
+            <button>Try again?</button>
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
