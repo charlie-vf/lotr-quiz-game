@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Lord of The Rings Quiz!</title>
+</head>
+<body>
+    <h1 class="heading">Lord of The Rings Quiz</h1>
+    <div class="game-area">
+        <div class="answer-btns btn-group">
+            <button class="btn answer-text" id="answer1">Pippin</button>
+            <button class="btn answer-text" id="answer2">Frodo</button>
+            <button class="btn answer-text" id="answer3">Samwise</button>
+            <button class="btn answer-text" id="answer4">Merry</button>
+        
+            <button id="next" class="btn next-btn hide">Next</button>
+        </div>
+        <div id="counter-area">
+            <p class="question-count">Question no: <span id="answer-no">1</span></p>
+            <p class="score-count">Score: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <div class="results-area hide">
+        <h2 class="final-score">You scored: <span id="final-score"></span>!</h2>
+        <div class="btn-group">
+            <button>Try again?</button>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
