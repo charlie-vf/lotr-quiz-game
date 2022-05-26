@@ -1,91 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Oxanium:wght@300&display=swap');
+
+:root {
+    background: rgb(198, 172, 241);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 62.5%;
+    font-family: Oxanium, sans-serif;
 }
 
-body {
-    background: url('../images/R.jpeg') no-repeat center center;
+h1 {
+    font-size: 5.4rem;
+    color: rgb(126, 82, 237);
+    margin-bottom: 5rem;
 }
 
-.heading {
-    text-align: center;
-    padding: 25px;
-    color: rgb(119, 54, 217);
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
 }
 
-.game-area {
-    background-color: #b8b8f0;
-    box-sizing: border-box;
-    width: 85%;
-    height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.answer-btns {
-
-}
-
-.btn-group {
+.flex-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-top: 4rem;
 }
 
-.btn {
-    font-size: 0.75rem;
-    font-weight: 500;
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/** Not used yet **/
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
     text-align: center;
-    padding: 1rem;
-    background-color: var(--black);
-    border-color: rgb(182, 131, 245);
-    border-radius: 2rem;
-    color: var(--off-white);
-    margin: 0.3rem;
 }
 
-.btn:hover {
-    background-color: purple;
-}
+/** end of not used yet **/
 
 .hide {
     display: none;
 }
 
-.answer-text {
-
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(214, 194, 244);
+    background: linear-gradient(90deg, rgba(26,9,165,1) 9%, rgba(54,16,140,1) 43%, rgba(155,88,215,1) 100%);
+    border-radius: 5px;
 }
 
-#next {
-
+.btn:hover {
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.05);
 }
 
-.next-btn {
-
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
 }
-
-#counter-area {
-    display: flex;
-    justify-content: space-between;
-}
-
-.question-count {
-
-}
-
-.score-count {
-
-}
-
-.results-area {
-
-}
-
-.final-score {
-
-}
-
