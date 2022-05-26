@@ -5,29 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
     <title>Lord of The Rings Quiz!</title>
 </head>
 <body>
-    <h1 class="heading">Lord of The Rings Quiz</h1>
-    <div class="game-area">
-        <div class="answer-btns btn-group">
-            <button class="btn answer-text" id="answer1">Pippin</button>
-            <button class="btn answer-text" id="answer2">Frodo</button>
-            <button class="btn answer-text" id="answer3">Samwise</button>
-            <button class="btn answer-text" id="answer4">Merry</button>
-        
-            <button id="next" class="btn next-btn hide">Next</button>
-        </div>
-        <div id="counter-area">
-            <p class="question-count">Question no: <span id="answer-no">1</span></p>
-            <p class="score-count">Score: <span id="score">0</span></p>
-        </div>
-    </div>
-
-    <div class="results-area hide">
-        <h2 class="final-score">You scored: <span id="final-score"></span>!</h2>
-        <div class="btn-group">
-            <button>Try again?</button>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull">
+                        </div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 id="score" class="hud-main-text">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <div id="question">Question
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">A</p>
+                <p class="choice-text" data-number="1">Option 1</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">B</p>
+                <p class="choice-text" data-number="2">Option 2</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">C</p>
+                <p class="choice-text" data-number="3">Option 3</p>
+            </div>
+            <div class="questions-container">
+                <p class="choice-letter">D</p>
+                <p class="choice-text" data-number="4">Option 4</p>
+            </div>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
