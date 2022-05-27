@@ -14,6 +14,23 @@ let questionCounter = 0;
 let acceptingAnswers = true;
 let availableQuestions = [];
 
+// Displays a quote based on the user's score
+
+let resultsQuote
+    if(score <= 40) {
+    resultsQuote = "You shall not pass!";
+    }
+    else if(score <= 80) {
+    resultsQuote = "Fool of a Took!";
+    }
+    else {
+    resultsQuote = "Not bad for a pointy-eared Elvish princeling!";
+    }
+    document.getElementById('resultsQuote').innerHTML = `${resultsQuote}`
+
+
+// The questions for the quiz
+
 let questions = [
     {
         question: 'Where does Bilbo Baggins live?',
@@ -121,10 +138,10 @@ function runGame() {
 
 function getNewQuestion() {
 
-    // Loads the end.html page once all questions have been answered
+    // Loads the results.html page once all questions have been answered
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
-        return window.location.assign('/end.html')
+        return window.location.assign('/results.html')
     }
 
     // Question count tracker updates after each question 
@@ -180,3 +197,6 @@ function incrementScore() {
     scoreText.innerText = `${score}`
 }
 runGame();
+
+// Results page quote choice
+
