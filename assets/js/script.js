@@ -6,7 +6,8 @@ const progressBarFull = document.getElementById('progressBarFull');
 
 let currentQuestion = {};
 
-/* Sets score and question counters to begin at 0 */
+/** Sets score and question counters to begin at 0
+ * These variables are used in the runGame function */
 let score = 0;
 let questionCounter = 0;
 
@@ -103,3 +104,79 @@ let questions = [
         answer: 4,
     }
 ]
+
+/* Unchanging constants */
+const MAX_QUESTIONS = 11;
+
+function runGame() {
+    questionCounter = 0;
+    score = 0;
+
+    // [...] spread operator - gets all the values from the questions variable
+    availableQuestions = [...questions]
+
+    // Calls this function to move on to the next question
+    getNewQuestion()
+}
+
+function getNewQuestion() {
+
+    // Loads the end.html page once all questions have been answered
+    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
+        return window.location.assign('/end.html')
+    }
+
+    // Question count tracker updates after each question 
+    questionCounter++;
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+    
+    // Takes the current question, divides it by the no of questions and multiplies it to
+    // get the % of the bar
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
+
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
+    question.innerText = currentQuestion.question;
+
+    // dataset refers to the data-number from the game.html file
+    // ensures it knows which choice we are clicking on
+    choices.forEach(choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    })
+
+    availableQuestions.splice(questionsIndex, 1);
+    acceptingAnswers = true;
+}
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        // Calls the css to color the selected choice based on whether it is correct or incorrect
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        // Adds 10 points (declared in the incrementScore function) if the answer is correct
+        if(classToApply === 'correct') {
+            incrementScore();
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 500)
+    }) 
+})
+
+function incrementScore() {
+    score += 10;
+    scoreText.innerText = `${score}`
+}
+runGame();
