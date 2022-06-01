@@ -124,10 +124,14 @@ function runGame() {
 
 function getNewQuestion() {
 
-    // Loads the results.html page once all questions have been answered
+    // Shows the results of the quiz once the final question has been answered
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
-        return window.location.assign('/results.html')
+        document.getElementById("game-page").classList.add("hide");
+        document.getElementById("results-page").classList.remove("hide")
+    }
+    else {
+        document.getElementById("results-page").classList.add("hide");
+        document.getElementById("game-page").classList.remove("hide")
     }
 
     // Question count tracker updates after each question 
@@ -162,17 +166,17 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number'];
 
         // Calls the css to color the selected choice based on whether it is correct or incorrect
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        let answerValue = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         // Adds 10 points (declared in the incrementScore function) if the answer is correct
-        if(classToApply === 'correct') {
+        if(answerValue === 'correct') {
             incrementScore();
         }
 
-        selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.add(answerValue);
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
+            selectedChoice.parentElement.classList.remove(answerValue);
             getNewQuestion();
         }, 500)
     }) 
