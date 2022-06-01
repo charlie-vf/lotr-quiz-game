@@ -82,3 +82,15 @@ h2 {
     transform: none;
 }
 
+.restart-btn {
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 20rem;
+    text-align: center;
+    margin: -65px 0px 0px 50px;
+    text-decoration: none;
+    color: rgb(214, 194, 244);
+    background: linear-gradient(90deg, rgba(26,9,165,1) 9%, rgba(54,16,140,1) 43%, rgba(155,88,215,1) 100%);
+    border-radius: 5px;
+    display: block;
+}

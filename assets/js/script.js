@@ -16,21 +16,7 @@ let availableQuestions = [];
 
 // Displays a quote based on the user's score
 
-let resultsQuote
-    if(score <= 40) {
-    resultsQuote = "You shall not pass!";
-    }
-    else if(score <= 80) {
-    resultsQuote = "Fool of a Took!";
-    }
-    else {
-    resultsQuote = "Not bad for a pointy-eared Elvish princeling!";
-    }
-    document.getElementById('resultsQuote').innerHTML = `${resultsQuote}`
-
-
 // The questions for the quiz
-
 let questions = [
     {
         question: 'Where does Bilbo Baggins live?',
