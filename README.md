@@ -31,12 +31,15 @@ The font color is either black or white, dependent on which is best for accessib
 
 ### Imagery
 
-I used one image across both the main game page and the results area for consistency
+I used one image across both the main game page and the results area for consistency. It depicts Gandalf (a main character in the series) riding towards Minas Tirith, a major location of the final instalment: Return of the King.
+I chose this image because it fits well with my chosen color scheme and does not detract from the main content of each page.
+The image was taken from [Screen Rant](https://screenrant.com/lord-of-the-rings-interesting-facts-trivia-minas-tirith/).
 
 ### Font
 
-The font used on this site is Oxanium, imported from Google Fonts. I really like this font as it is neat and easy to read. 
+The font used on this site is Oxanium, imported from [Google Fonts](https://fonts.google.com/specimen/Oxanium). I really like this font as it is neat and easy to read. 
 I had considered using a font closer to the popular Elvish style writing from the source material, however, this would likely have been to elaborate a font and may have caused issues in reading.
+I used text transform on the button texts of the main game page and results area for contrast and readability.
 
 ## Features
 
@@ -63,4 +66,38 @@ The quiz page features:
 
 ### Results page
 
-The results page displays once the final question has been answered, 
+The results page displays once the final question has been answered. It features the user's score, a congratulatory message and buttons to Restart the game or navigate back to the Home page.
+
+## Changes and Updates
+
+- Originally, the results area was a separate page called results.html. This was changed so the results area was part of the main game.html content as it prevents users from simply being able to enter the URL for the results area and reach it without first needing to complete the quiz.
+
+## Future Instalments
+
+- I will likely add many more questions in the future to really fill out the quiz game. Once this has begun, I will add a highscores page so users can keep track of how they have been doing.
+    - I chose not to include a highscores page at the current stage as there are only eleven (11) questions, and I wanted to focus more on providing information and context for the quiz.
+
+## Deployment and Cloning
+
+This website was deployed using GitHub pages:
+- In the GitHub repo, navigate to Settings
+- Select Pages from the navigation bar
+- Select branch:main and folder:/root
+- Hit Save
+- A link to the live website is provided (it may take a few minutes to go live)
+
+The live website will update following any new commits and pushes to the main branch.
+<br>
+
+To clone this site and run it locally on your device:
+
+- Copy the following text: git clone https://github.com/charlie-vf/lotr-quiz-game.git
+- In your terminal, navigate to your chosen local directory
+- Paste the copied text and hit enter
+
+
+## Credits
+
+### Sites Which Helped Me Out
+
+- 
