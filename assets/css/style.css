@@ -87,6 +87,7 @@ h2 {
     padding: 2rem 0;
     width: 20rem;
     text-align: center;
+    text-transform: uppercase;
     margin: -65px 0px 0px 50px;
     text-decoration: none;
     color: rgb(214, 194, 244);
@@ -97,4 +98,39 @@ h2 {
 
 .hide {
     display: none;
-  }
+}
+
+/* Highscores form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.highscores-form-container {
+    align-items: center;
+    max-width: 45rem;
+}
+
+.form-input {
+    width: 25rem;
+    height: 4rem;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    background: linear-gradient(90deg, rgba(58, 9, 165, 0.3) 9%, rgba(65, 27, 125, 0.3) 43%, rgba(134, 69, 225, 0.3) 100%);
+    border: 2px solid #3b0a88;
+    color: white;
+}
+
+.results-h1 {
+    font-size: 3.5rem;
+}
+
+.results-h2 {
+    font-size: 2rem;
+    color: rgb(113, 75, 209);
+}
+
+form > .btn {
+    text-transform: uppercase;
+}

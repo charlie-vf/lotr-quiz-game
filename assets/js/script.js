@@ -1,8 +1,22 @@
+// Content of main game div
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
+
+// Results page
+const playerName = document.getElementById('name');
+const finalScore = document.getElementById('final-score');
+const submitScore = document.getElementById('submit-score');
+
+const MAX_HIGH_SCORES = 10;
+
+// Gets the highscores from local storage, or get an empty array if returns null (no highscore, yet)
+// Tutorial video: https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10
+const highScores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+const MAX_QUESTIONS = 11;
 
 let currentQuestion = {};
 
@@ -13,8 +27,6 @@ let questionCounter = 0;
 
 let acceptingAnswers = true;
 let availableQuestions = [];
-
-// Displays a quote based on the user's score
 
 // The questions for the quiz
 let questions = [
@@ -108,9 +120,7 @@ let questions = [
     }
 ]
 
-/* Unchanging constants */
-const MAX_QUESTIONS = 11;
-
+// Begins game
 function runGame() {
     questionCounter = 0;
     score = 0;
@@ -126,12 +136,13 @@ function getNewQuestion() {
 
     // Shows the results of the quiz once the final question has been answered
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        document.getElementById("game-page").classList.add("hide");
-        document.getElementById("results-page").classList.remove("hide")
+        document.getElementById('game-page').classList.add('hide');
+        document.getElementById('results-page').classList.remove('hide');
+        finalScore.innerText = `${score}`;
     }
     else {
-        document.getElementById("results-page").classList.add("hide");
-        document.getElementById("game-page").classList.remove("hide")
+        document.getElementById('results-page').classList.add('hide');
+        document.getElementById('game-page').classList.remove('hide')
     }
 
     // Question count tracker updates after each question 
@@ -168,13 +179,15 @@ choices.forEach(choice => {
         // Calls the css to color the selected choice based on whether it is correct or incorrect
         let answerValue = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-        // Adds 10 points (declared in the incrementScore function) if the answer is correct
+        // Adds 10 points (declared in the incrementScore function below) if the answer is correct
         if(answerValue === 'correct') {
             incrementScore();
         }
 
         selectedChoice.parentElement.classList.add(answerValue);
 
+        // Allows 500ms after selecting an answer so user can see if the result befor the
+        // next question displays
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(answerValue);
             getNewQuestion();
@@ -186,6 +199,7 @@ function incrementScore() {
     score += 10;
     scoreText.innerText = `${score}`
 }
+
 runGame();
 
 // Results page quote choice
