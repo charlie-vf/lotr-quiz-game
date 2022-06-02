@@ -202,5 +202,30 @@ function incrementScore() {
 
 runGame();
 
+
+// Tutorial for highscores: https://www.youtube.com/watch?v=f4fB9Xg2JEY
+
+function saveHighScore(e) {
+    e.preventDefault();
+    
+    const highScoreLog = {
+        name: playerName.value,
+        score: score
+    };
+    
+    highScores.push(score);
+
+    highScores.sort((a, b) => b.score - a.score)
+
+    // MAX_HIGH_SCORES set to 10
+    highScores.splice(MAX_HIGH_SCORES);
+
+    localStorage.setItem('highscores', JSON.stringify(highScores));
+    window.location.assign('highscores.html');
+}
+
+submitScore.addEventListener('click', saveHighScore);
+
+
 // Results page quote choice
 
