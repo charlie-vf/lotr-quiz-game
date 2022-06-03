@@ -9,6 +9,27 @@
     <title>Lord of The Rings Quiz!</title>
 </head>
 <body>
+
+    <!-- Header -->
+
+    <header>
+        <a href="index.html">
+            <h1 id="lotr">Lord of The Rings - Quiz</h1>
+        </a>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html">About LoTR</a>
+                </li>
+                <li>
+                    <a href="game.html">Restart Quiz</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Main game div -->
     <div class="container hide" id="game-page">
         <div id="game" class="justify-center flex-column">
@@ -51,14 +72,12 @@
             </div>
         </div>
     </div>
-    <div><a href="game.html" class="restart-btn">Restart Game</a></div>
     
-
     <!-- Results page -->
     <div class="container hide" id="results-page">
         <div id="results" class="flex-center flex-column">
-            <h1 class="results-h1">You scored: <span class="results-h1" id="final-score">!</span></h1>
-            <h2 id="results-quote" class="results-h2"></h2>
+            <h1 class="results-h1">You scored: <span class="results-h1" id="final-score"></span>!</h1>
+            <h2 id="results-quote" class="results-h2">Congratulations!</h2>
             <h2 class="results-h2">Where do you want to go now?</h2>
             <a href="about.html" class="btn">About LoTR</a>
             <a href="game.html" class="btn">Restart Game</a>

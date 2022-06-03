@@ -8,6 +8,7 @@ const progressBarFull = document.getElementById('progressBarFull');
 // Results page
 const playerName = document.getElementById('name');
 const finalScore = document.getElementById('final-score');
+const finalScoreQuote = document.getElementById('results-quote')
 const submitScore = document.getElementById('submit-score');
 
 const MAX_HIGH_SCORES = 10;
@@ -17,6 +18,9 @@ const MAX_HIGH_SCORES = 10;
 const highScores = JSON.parse(localStorage.getItem('highscores')) || [];
 
 const MAX_QUESTIONS = 11;
+
+// Used to decide which quote the user receives on the results page
+let minScore = 60;
 
 let currentQuestion = {};
 
@@ -121,6 +125,7 @@ let questions = [
 ]
 
 // Begins game
+
 function runGame() {
     questionCounter = 0;
     score = 0;
@@ -139,6 +144,14 @@ function getNewQuestion() {
         document.getElementById('game-page').classList.add('hide');
         document.getElementById('results-page').classList.remove('hide');
         finalScore.innerText = `${score}`;
+    
+        if(score <= minScore) {
+            finalScoreQuote.innerText = `You Shall Not Pass!`
+        }
+
+        else if(score > minScore) {
+            finalScoreQuote.innerText = `Not bad for a pointy-eared Elvish princeling!`
+        }
     }
     else {
         document.getElementById('results-page').classList.add('hide');

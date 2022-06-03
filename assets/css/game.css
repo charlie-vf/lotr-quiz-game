@@ -3,7 +3,8 @@
 .container {
     background: url('../images/R.jpeg') no-repeat center center;
     height: 70rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .questions-container {

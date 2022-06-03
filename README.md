@@ -50,9 +50,16 @@ I used text transform on the button texts of the main game page and results area
 The home page is very simple, featuring the site title and two buttons which link to the game itself and an information page which gives the user some information about Lord of The Rings.
 By keeping it simple, this relates to the user goal of easy navigation.
 
+### Nav Bar
+
+The navigation bar is a feature of the About LoTR and Quiz pages. It provides links to the homepage, the About section and the quiz itself. I chose not to implement it on the home page and results areas as I felt using call-to-action buttons was the better choice, visually, for these pages.
+The bar contains an active feature when on the About page, however this is not included when the user is in the quiz area as the button which links to the quiz is changed from saying 'The Quiz,' in the About page, to 'Restart Quiz,' and thus having an active bar on the link may cause confusion.
+Clicking on the title above the navigation bar will take the user back to the homepage (index.html).
+
 ### The Quiz
 
 The quiz page features:
+- A nav bar providing links to the homepage, about section and an option to restart the game.
 - A progress bar which updates as the user moves through the questions. I implemented this as it can be frustrating completing a quiz with no knowledge of how close you are to the end.
 - A score count which adds ten (10) each time the user selects a correct answer.
 - A center-aligned question
@@ -61,12 +68,10 @@ The quiz page features:
     - If the answer selected is incorrect, it will turn a burn orange (rgb(255, 85, 0))
     - There is a 500ms delay before the next question is displayed, giving the user time to see the result of their choice before moving on
     - On hover, the answer option bars will expand, creating a more visual representation of what is about to be selected
-- A 'Restart Game' button which will bring the user back to Question One (1) and Score Zero (0)
-    - This is useful in case an answer is selected by accident as it means the user does not have to waste a turn on the quiz game in order to try again
 
 ### Results page
 
-The results page displays once the final question has been answered. It features the user's score, a congratulatory message and buttons to Restart the game or navigate back to the Home page.
+The results page displays once the final question has been answered. It features the user's score, a quote based on whether their score was above or below 60, and buttons to Restart the game or navigate back to the Home page.
 
 ## Changes and Updates
 
