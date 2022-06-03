@@ -8,14 +8,7 @@ const progressBarFull = document.getElementById('progressBarFull');
 // Results page
 const playerName = document.getElementById('name');
 const finalScore = document.getElementById('final-score');
-const finalScoreQuote = document.getElementById('results-quote')
-const submitScore = document.getElementById('submit-score');
-
-const MAX_HIGH_SCORES = 10;
-
-// Gets the highscores from local storage, or get an empty array if returns null (no highscore, yet)
-// Tutorial video: https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10
-const highScores = JSON.parse(localStorage.getItem('highscores')) || [];
+const finalScoreQuote = document.getElementById('results-quote');
 
 const MAX_QUESTIONS = 11;
 
@@ -24,15 +17,16 @@ let minScore = 60;
 
 let currentQuestion = {};
 
-/** Sets score and question counters to begin at 0
- * These variables are used in the runGame function */
+// Sets score and question counters to begin at 0
+// These variables are used in the runGame function
 let score = 0;
 let questionCounter = 0;
 
 let acceptingAnswers = true;
 let availableQuestions = [];
 
-// The questions for the quiz
+// Array of questions for the quiz
+
 let questions = [
     {
         question: 'Where does Bilbo Baggins live?',
@@ -139,14 +133,15 @@ function runGame() {
 
 function getNewQuestion() {
 
-    // Shows the results of the quiz once the final question has been answered
+    // Shows the results of the quiz once the final question has been answered, alongside a quote
+    // Calls on the hide class from game.css to decide whether the quiz or results area is displayed
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         document.getElementById('game-page').classList.add('hide');
         document.getElementById('results-page').classList.remove('hide');
         finalScore.innerText = `${score}`;
     
         if(score <= minScore) {
-            finalScoreQuote.innerText = `You Shall Not Pass!`
+            finalScoreQuote.innerText = `Fool of a Took!`
         }
 
         else if(score > minScore) {
@@ -158,7 +153,8 @@ function getNewQuestion() {
         document.getElementById('game-page').classList.remove('hide')
     }
 
-    // Question count tracker updates after each question 
+    // Question count tracker updates after each question
+    // Tutorial for tracker: https://www.youtube.com/watch?v=4bctmtuZVcM&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=7
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     
@@ -171,7 +167,7 @@ function getNewQuestion() {
     question.innerText = currentQuestion.question;
 
     // dataset refers to the data-number from the game.html file
-    // ensures it knows which choice we are clicking on
+    // declares which choice we are clicking on
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
@@ -199,8 +195,7 @@ choices.forEach(choice => {
 
         selectedChoice.parentElement.classList.add(answerValue);
 
-        // Allows 500ms after selecting an answer so user can see if the result befor the
-        // next question displays
+        // Allows 500ms after selecting an answer so user can see the result before the next question displays
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(answerValue);
             getNewQuestion();
@@ -208,37 +203,11 @@ choices.forEach(choice => {
     }) 
 })
 
+// Adds 10 each time the user selects the correct answer
+
 function incrementScore() {
     score += 10;
     scoreText.innerText = `${score}`
 }
 
 runGame();
-
-
-// Tutorial for highscores: https://www.youtube.com/watch?v=f4fB9Xg2JEY
-
-function saveHighScore(e) {
-    e.preventDefault();
-    
-    const highScoreLog = {
-        name: playerName.value,
-        score: score
-    };
-    
-    highScores.push(score);
-
-    highScores.sort((a, b) => b.score - a.score)
-
-    // MAX_HIGH_SCORES set to 10
-    highScores.splice(MAX_HIGH_SCORES);
-
-    localStorage.setItem('highscores', JSON.stringify(highScores));
-    window.location.assign('highscores.html');
-}
-
-submitScore.addEventListener('click', saveHighScore);
-
-
-// Results page quote choice
-

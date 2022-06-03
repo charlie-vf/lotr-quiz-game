@@ -14,7 +14,7 @@
 
 h1 {
     font-size: 5.4rem;
-    color: rgb(126, 82, 237);
+    color: rgb(95, 48, 215);
     margin-bottom: 5rem;
 }
 
@@ -44,16 +44,9 @@ h2 {
     align-items: center;
 }
 
-/** Not used yet **/
 .justify-center {
     justify-content: center;
 }
-
-.text-center {
-    text-align: center;
-}
-
-/** end of not used yet **/
 
 .hide {
     display: none;
@@ -94,10 +87,6 @@ h2 {
     background: linear-gradient(90deg, rgba(26,9,165,1) 9%, rgba(54,16,140,1) 43%, rgba(155,88,215,1) 100%);
     border-radius: 5px;
     display: block;
-}
-
-.hide {
-    display: none;
 }
 
 /* About LoTR page */
@@ -143,7 +132,7 @@ header a:hover {
 }
 
 #about-container h2 {
-    color: rgb(126, 82, 237);
+    color: rgb(95, 48, 215);;
     margin-bottom: -0.7rem;
 }
 
@@ -186,37 +175,44 @@ hr {
     margin: 1rem 0;
 }
 
-/* Highscores form */
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.highscores-form-container {
-    align-items: center;
-    max-width: 45rem;
-}
-
-.form-input {
-    width: 25rem;
-    height: 4rem;
-    margin-bottom: 15px;
-    font-size: 3rem;
-    background: linear-gradient(90deg, rgba(58, 9, 165, 0.3) 9%, rgba(65, 27, 125, 0.3) 43%, rgba(134, 69, 225, 0.3) 100%);
-    border: 2px solid #3b0a88;
-    color: white;
-}
-
 .results-h1 {
     font-size: 3.5rem;
 }
 
 .results-h2 {
     font-size: 2.5rem;
-    color: rgb(113, 75, 209);
+    color: rgb(95, 48, 215);;
 }
 
 .btn {
     text-transform: uppercase;
 }
+
+/* Media Queries */
+
+/* For large screens max-width 1920px and lower */
+
+@media screen and (max-width: 1920px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #about-container {
+        width: auto;
+        padding: 20px 0 50px 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        column-gap: 5rem;
+        row-gap: 2rem;
+        grid-template-areas:
+        'bg-info bg-info bg-info bg-info bg-info bg-info'
+        'fotr fotr fotr fotr fotr fotr'
+        'tt tt tt tt tt tt'
+        'rotk rotk rotk rotk rotk rotk';
+    }
+}
+

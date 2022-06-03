@@ -5,6 +5,8 @@ The live website can be found [here](https://charlie-vf.github.io/lotr-quiz-game
 
 *In this README, I use 'Lord of The Rings' and its acronym, 'LoTR', interchangeably.*
 
+# Table of Contents
+
 ## **Purpose**
 
 This eleven-question quiz game was designed mostly for fans of Lord of The Rings to test their knowledge of less obvious topics in the LoTR-universe.
@@ -17,9 +19,9 @@ This eleven-question quiz game was designed mostly for fans of Lord of The Rings
 - The site should be responsive to all devices
 - To test my knowledge of Lord of The Rings
 
-## Design
+## **Design**
 
-### Colors
+### **Colors**
 
 The main color scheme of this site is purple:
 
@@ -29,23 +31,23 @@ The main color scheme of this site is purple:
 
 The font color is either black or white, dependent on which is best for accessibility
 
-### Imagery
+### **Imagery**
 
 I used one image across both the main game page and the results area for consistency. It depicts Gandalf (a main character in the series) riding towards Minas Tirith, a major location of the final instalment: Return of the King.
 I chose this image because it fits well with my chosen color scheme and does not detract from the main content of each page.
 The image was taken from [Screen Rant](https://screenrant.com/lord-of-the-rings-interesting-facts-trivia-minas-tirith/).
 
-### Font
+### **Font**
 
 The font used on this site is Oxanium, imported from [Google Fonts](https://fonts.google.com/specimen/Oxanium). I really like this font as it is neat and easy to read. 
 I had considered using a font closer to the popular Elvish style writing from the source material, however, this would likely have been to elaborate a font and may have caused issues in reading.
 I used text transform on the button texts of the main game page and results area for contrast and readability.
 
-## Features
+## **Features**
 
-### Existing Features
+### **Existing Features**
 
-### Home Page
+### **Home Page**
 
 The home page is very simple, featuring the site title and two buttons which link to the game itself and an information page which gives the user some information about Lord of The Rings.
 By keeping it simple, this relates to the user goal of easy navigation.
@@ -56,7 +58,7 @@ The navigation bar is a feature of the About LoTR and Quiz pages. It provides li
 The bar contains an active feature when on the About page, however this is not included when the user is in the quiz area as the button which links to the quiz is changed from saying 'The Quiz,' in the About page, to 'Restart Quiz,' and thus having an active bar on the link may cause confusion.
 Clicking on the title above the navigation bar will take the user back to the homepage (index.html).
 
-### The Quiz
+### **The Quiz**
 
 The quiz page features:
 - A nav bar providing links to the homepage, about section and an option to restart the game.
@@ -69,11 +71,17 @@ The quiz page features:
     - There is a 500ms delay before the next question is displayed, giving the user time to see the result of their choice before moving on
     - On hover, the answer option bars will expand, creating a more visual representation of what is about to be selected
 
-### Results page
+### **About Lord of The Rings Page**
 
-The results page displays once the final question has been answered. It features the user's score, a quote based on whether their score was above or below 60, and buttons to Restart the game or navigate back to the Home page.
+This page is quite content-heavy as it provides background on the series, its releases and adaptations, as well as giving an overview of all three written instalments of the series.
+I enjoying adding educational sections to my websites so they are enjoyable and accessible by all, even those who may not have partaken in the content previously, or who simply do not know that much about the topic.
+A couple of answers to the quiz are hinted at in this page, leaning again into making the quiz fun for everyone as some of the questions are less generic.
 
-## Changes and Updates
+### **Results page**
+
+The results page displays once the final question has been answered. It features the user's score, a quote from the series based on whether their score was above or below 60/110, and buttons to Restart the game or navigate back to the Home page.
+
+## **Changes and Updates**
 
 - Originally, the results area was a separate page called results.html. This was changed so the results area was part of the main game.html content as it prevents users from simply being able to enter the URL for the results area and reach it without first needing to complete the quiz.
 
@@ -82,7 +90,7 @@ The results page displays once the final question has been answered. It features
 - I will likely add many more questions in the future to really fill out the quiz game. Once this has begun, I will add a highscores page so users can keep track of how they have been doing.
     - I chose not to include a highscores page at the current stage as there are only eleven (11) questions, and I wanted to focus more on providing information and context for the quiz.
 
-## Deployment and Cloning
+## **Deployment and Cloning**
 
 This website was deployed using GitHub pages:
 - In the GitHub repo, navigate to Settings
@@ -101,8 +109,16 @@ To clone this site and run it locally on your device:
 - Paste the copied text and hit enter
 
 
-## Credits
+## **Credits**
 
-### Sites Which Helped Me Out
+### **Sites Which Helped Me Out**
 
-- 
+- [This Playlist]('https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx') taught me how to design the Question Counter in the HUD, how to create and call on CSS to color a selected answer based on its accuracy and introduced me to the TimeOut feature.
+    - I referred to this playlist throughout the production of my quiz if something was not working as intended
+- [This Site]('https://en.wikipedia.org/wiki/Adaptations_of_The_Lord_of_the_Rings') gave me the release dates for different adapations of the series
+
+### **Other Special Mentions**
+
+- All information, other than the dates in the Background Info section, on the About page was taken from my own memory and rereads of The Lord of The Rings series.
+- A big thank you to my mentor, Brian Macchiara, for continued support during the project
+- Credit to the good people in the Slack server for helping out when things weren't working
