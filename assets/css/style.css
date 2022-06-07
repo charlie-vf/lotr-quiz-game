@@ -127,6 +127,7 @@ header a:hover {
     column-gap: 5rem;
     row-gap: 5rem;
     grid-template-areas:
+    'abt-h2 abt-h2 abt-h2 abt-h2 abt-h2 abt-h2'
     'bg-info bg-info bg-info jrr jrr jrr'
     'fpic fpic fpic fotr fotr fotr'
     'tt tt tt tpic tpic tpic'
@@ -143,12 +144,18 @@ header a:hover {
     line-height: 2.2rem;
 }
 
-.about-box {
+#about-box {
     border: 1px solid rgb(126, 82, 237);
     border-radius: 10px;
     max-width: 95%;
     height: auto;
     padding: 1rem;
+}
+
+.abt-h2 {
+    grid-area: abt-h2;
+    text-align: center;
+    color: rgb(108, 9, 221);
 }
 
 .bg-info {
@@ -162,24 +169,28 @@ header a:hover {
     height: 100%;
     width: 100%;
     background-size: 100%;
+    margin: 0 1.5rem
 }
 
 .fpic {
     grid-area: fpic;
     background: url('../images/fotr2.jpeg') no-repeat center center;
     background-size: 150%;
+    margin: 0 1.5rem
 }
 
 .tpic {
     grid-area: tpic;
     background: url('../images/tt.jpeg') no-repeat center center;
     background-size: 150%;
+    margin: 0 1.5rem
 }
 
 .rpic {
     grid-area: rpic;
     background: url('../images/rotk.jpeg') no-repeat center center;
     background-size: 150%;
+    margin: 0 1.5rem
 }
 
 .fotr {
@@ -209,7 +220,7 @@ hr {
 
 .results-h2 {
     font-size: 2.5rem;
-    color: rgb(95, 48, 215);;
+    color: rgb(95, 48, 215);
 }
 
 .btn {
@@ -227,6 +238,12 @@ hr {
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .jrr, .fpic, .tpic, .rpic {
+        background-size: cover;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #about-container {
         width: auto;
@@ -237,10 +254,16 @@ hr {
         column-gap: 5rem;
         row-gap: 2rem;
         grid-template-areas:
-        'bg-info bg-info bg-info bg-info bg-info bg-info'
-        'fotr fotr fotr fotr fotr fotr'
-        'tt tt tt tt tt tt'
-        'rotk rotk rotk rotk rotk rotk';
+        '. abt-h2 abt-h2 abt-h2 abt-h2 .'
+        '. bg-info bg-info bg-info bg-info .'
+        '. fotr fotr fotr fotr .'
+        '. tt tt tt tt .'
+        '. rotk rotk rotk rotk .';
+    }
+    .jrr, .fpic, .tpic, .rpic {
+        display: none;
     }
 }
+    
+
 
