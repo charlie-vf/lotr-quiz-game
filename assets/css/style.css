@@ -122,13 +122,15 @@ header a:hover {
     margin-top: 5rem;
     padding-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 4fr);
     grid-auto-rows: minmax(100px, auto);
     column-gap: 5rem;
     row-gap: 5rem;
     grid-template-areas:
-    'bg-info bg-info bg-info fotr fotr fotr'
-    'tt tt tt rotk rotk rotk'
+    'bg-info bg-info bg-info jrr jrr jrr'
+    'fpic fpic fpic fotr fotr fotr'
+    'tt tt tt tpic tpic tpic'
+    'rpic rpic rpic rotk rotk rotk'
 }
 
 #about-container h2 {
@@ -152,6 +154,32 @@ header a:hover {
 .bg-info {
     grid-area: bg-info;
     margin: 0 1.5rem;
+}
+
+.jrr {
+    grid-area: jrr;
+    background: url('../images/JRRTolkien.jpeg') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+}
+
+.fpic {
+    grid-area: fpic;
+    background: url('../images/fotr2.jpeg') no-repeat center center;
+    background-size: 150%;
+}
+
+.tpic {
+    grid-area: tpic;
+    background: url('../images/tt.jpeg') no-repeat center center;
+    background-size: 150%;
+}
+
+.rpic {
+    grid-area: rpic;
+    background: url('../images/rotk.jpeg') no-repeat center center;
+    background-size: 150%;
 }
 
 .fotr {
