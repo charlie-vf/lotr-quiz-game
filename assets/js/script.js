@@ -171,6 +171,7 @@ function getNewQuestion() {
     // choice refers to the choice lists from the questions array
     // declares which choice the user is selecting
     // tutorial for forEach: https://www.w3schools.com/jsref/jsref_forEach.asp
+    // this video helped with displaying questions: https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
     options.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
