@@ -134,12 +134,13 @@ function runGame() {
 function getNewQuestion() {
 
     // Shows the results of the quiz once the final question has been answered, alongside a quote
-    // Calls on the hide class from game.css to decide whether the quiz or results area is displayed
+    // If all questions answered - displays Results area
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         document.getElementById('game-page').classList.add('hide');
         document.getElementById('results-page').classList.remove('hide');
         finalScore.innerText = `${score}`;
     
+        // Results Quote selector based on score
         if(score <= minScore) {
             finalScoreQuote.innerText = `Fool of a Took!`
         }
@@ -148,6 +149,7 @@ function getNewQuestion() {
             finalScoreQuote.innerText = `Not bad for a pointy-eared Elvish princeling!`
         }
     }
+    // Otherwise, continues displaying new questions
     else {
         document.getElementById('results-page').classList.add('hide');
         document.getElementById('game-page').classList.remove('hide')
@@ -158,8 +160,7 @@ function getNewQuestion() {
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     
-    // Takes the current question, divides it by the no of questions and multiplies it to
-    // get the % of the bar
+    // Takes the current question, divides it by the no of questions and multiplies it to get the % of the bar
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -186,18 +187,20 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number'];
 
         // Calls the css to color the selected choice based on whether it is correct or incorrect
-        let answerValue = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        let answerAccuracy = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         // Adds 10 points (declared in the incrementScore function below) if the answer is correct
-        if(answerValue === 'correct') {
+        if(answerAccuracy === 'correct') {
             incrementScore();
         }
 
-        selectedChoice.parentElement.classList.add(answerValue);
+        // Displays the css for correct or incorrect
+        selectedChoice.parentElement.classList.add(answerAccuracy);
 
         // Allows 500ms after selecting an answer so user can see the result before the next question displays
+        // Removes css for correct or incorrect until new answer selected
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(answerValue);
+            selectedChoice.parentElement.classList.remove(answerAccuracy);
             getNewQuestion();
         }, 500)
     }) 
