@@ -9,7 +9,7 @@ The live website can be found [here](https://charlie-vf.github.io/lotr-quiz-game
 
 ## **Purpose**
 
-This eleven-question quiz game was designed mostly for fans of Lord of The Rings to test their knowledge of less obvious topics in the LoTR-universe.
+This eleven-question quiz game was designed both for fans of Lord of The Rings to test their knowledge and for others to learn all about the series.
 
 ## **User Design and Experience**
 
@@ -17,6 +17,7 @@ This eleven-question quiz game was designed mostly for fans of Lord of The Rings
 
 - The site should be easy to navigate
 - The site should be responsive to all devices
+- To learn about the series and its creator
 - To test my knowledge of Lord of The Rings
 
 ## **Design**
@@ -33,15 +34,17 @@ The font color is either black or white, dependent on which is best for accessib
 
 ### **Imagery**
 
-I used one image across both the main game page and the results area for consistency. It depicts Gandalf (a main character in the series) riding towards Minas Tirith, a major location of the final instalment: Return of the King.
+I used one image across the homepage, game page and results area for consistency. It depicts Gandalf (a main character in the series) riding towards Minas Tirith, a major location of the final instalment: Return of the King.
 I chose this image because it fits well with my chosen color scheme and does not detract from the main content of each page.
 The image was taken from [Screen Rant](https://screenrant.com/lord-of-the-rings-interesting-facts-trivia-minas-tirith/).
+
+I also incorporated accompanying images in the About LoTR page. As the page is quite content-heavy, I found that having a side-by-side image for each section of information breaks it up well and prevents the page from simply being an info-dump. Instead, it introduces people who may be unfamiliar with the series to the beauty of the visuals, and provides a nostalgia for those already familiar with Lord of The Rings. All images used on this page can be found in the docs folder.
 
 ### **Font**
 
 The font used on this site is Oxanium, imported from [Google Fonts](https://fonts.google.com/specimen/Oxanium). I really like this font as it is neat and easy to read. 
 I had considered using a font closer to the popular Elvish style writing from the source material, however, this would likely have been to elaborate a font and may have caused issues in reading.
-I used text transform on the button texts of the main game page and results area for contrast and readability.
+I used text transform on the button texts of the main game page and results area for contrast and readability, as well as changing the font-sizes of various headings.
 
 ## **Features**
 
@@ -56,18 +59,18 @@ By keeping it simple, this relates to the user goal of easy navigation.
 
 The navigation bar is a feature of the About LoTR and Quiz pages. It provides links to the homepage, the About section and the quiz itself. I chose not to implement it on the home page and results areas as I felt using call-to-action buttons was the better choice, visually, for these pages.
 The bar contains an active feature when on the About page, however this is not included when the user is in the quiz area as the button which links to the quiz is changed from saying 'The Quiz,' in the About page, to 'Restart Quiz,' and thus having an active bar on the link may cause confusion.
-Clicking on the title above the navigation bar will take the user back to the homepage (index.html).
+Clicking on the title above the navigation bar will also take the user back to the homepage.
 
 ### **The Quiz**
 
 The quiz page features:
-- A nav bar providing links to the homepage, about section and an option to restart the game.
-- A progress bar which updates as the user moves through the questions. I implemented this as it can be frustrating completing a quiz with no knowledge of how close you are to the end.
-- A score count which adds ten (10) each time the user selects a correct answer.
+- A nav bar providing links to the homepage, about section and an option to restart the game
+- A progress bar which updates as the user moves through the questions. I implemented this as it can be frustrating completing a quiz with no knowledge of how close you are to the end
+- A score count which adds ten (10) each time the user selects a correct answer
 - A center-aligned question
 - Four (4) answer options to choose from
     - If the answer selected is correct, it will turn a light blue (rgb(28, 200, 177))
-    - If the answer selected is incorrect, it will turn a burn orange (rgb(255, 85, 0))
+    - If the answer selected is incorrect, it will turn a burnt orange (rgb(255, 85, 0))
     - There is a 500ms delay before the next question is displayed, giving the user time to see the result of their choice before moving on
     - On hover, the answer option bars will expand, creating a more visual representation of what is about to be selected
 
@@ -77,9 +80,19 @@ This page is quite content-heavy as it provides background on the series, its re
 I enjoying adding educational sections to my websites so they are enjoyable and accessible by all, even those who may not have partaken in the content previously, or who simply do not know that much about the topic.
 A couple of answers to the quiz are hinted at in this page, leaning again into making the quiz fun for everyone as some of the questions are less generic.
 
-### **Results page**
+### **Results Area**
 
-The results page displays once the final question has been answered. It features the user's score, a quote from the series based on whether their score was above or below 60/110, and buttons to Restart the game or navigate back to the Home page.
+The results area displays once the final question has been answered. The relevant JavaScript hides the quiz area and removes the hidden feature from the results area. It features the user's score, a quote from the series based on whether their score was above or below 60/110, and buttons to Restart the game, visit the About page or navigate back to the Home page.
+
+## **Technologies and Sites Used**
+
+- HTML5 - Provided the structure for the site
+- CSS - Provided styling and visuals
+- JavaScript - Programmed the quiz and results area
+- GitPod - Site for writing code and pushing it to the live website
+- GitHub - Site for hosting the repo and deploying the website
+- TinyPNG - Site for compressing images for faster load
+- Google Fonts - Supplied Oxanium font
 
 ## **Changes and Updates**
 

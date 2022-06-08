@@ -19,11 +19,17 @@ h1 {
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 4rem;
     margin-bottom: 4rem;
 }
 
+.home-h2 {
+    font-size: 2.5rem;
+    color: rgb(95, 48, 215);
+}
+
 .container {
+    background: url('../images/minas-tirith-container-image.jpeg') no-repeat center center;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -156,6 +162,7 @@ header a:hover {
     grid-area: abt-h2;
     text-align: center;
     color: rgb(108, 9, 221);
+    text-transform: uppercase;
 }
 
 .bg-info {
@@ -165,7 +172,7 @@ header a:hover {
 
 .jrr {
     grid-area: jrr;
-    background: url('../images/JRRTolkien.jpeg') no-repeat center center;
+    background: url('../images/bg-info-accompanying-image.jpeg') no-repeat center center;
     height: 100%;
     width: 100%;
     background-size: 100%;
@@ -174,21 +181,21 @@ header a:hover {
 
 .fpic {
     grid-area: fpic;
-    background: url('../images/fotr2.jpeg') no-repeat center center;
+    background: url('../images/fotr-acompanying-image.jpeg') no-repeat center center;
     background-size: 150%;
     margin: 0 1.5rem
 }
 
 .tpic {
     grid-area: tpic;
-    background: url('../images/tt.jpeg') no-repeat center center;
+    background: url('../images/tt-acompanying-image.jpeg') no-repeat center center;
     background-size: 150%;
     margin: 0 1.5rem
 }
 
 .rpic {
     grid-area: rpic;
-    background: url('../images/rotk.jpeg') no-repeat center center;
+    background: url('../images/rotk-accompanying-image.jpeg') no-repeat center center;
     background-size: 150%;
     margin: 0 1.5rem
 }
@@ -213,6 +220,8 @@ hr {
     width: 100%;
     margin: 1rem 0;
 }
+
+/* Results Page */
 
 .results-h1 {
     font-size: 3.5rem;
