@@ -17,11 +17,12 @@ The live website can be found [here](https://charlie-vf.github.io/lotr-quiz-game
     - [Home Page](#home-page) 
     - [Nav Bar](#nav-bar)
     - [The Quiz](#the-quiz)
-    - [About Page](#About-Lord-of-The-Rings-Page)
+    - [About Page](#about-lord-of-the-rings-page)
     - [Results Area](#results-area)
 - [Technologies](#technologies-and-sites-used)
 - [Changes & Updates](#changes-and-updates)
 - [Future Instalments](#future-instalments)
+- [Testing & Validation](#testing-and-validation)
 - [Deployment](#deployment-and-cloning)
 - [Credits](#credits)
     - [Sites](#sites-which-helped-me-out)
@@ -77,7 +78,7 @@ By keeping it simple, this relates to the user goal of easy navigation.
 
 ![Home Page](docs/home-page-ss.png)
 
-### Nav Bar
+### **Nav Bar**
 
 The navigation bar is a feature of the About LoTR and Quiz pages. It provides links to the homepage, the About section and the quiz itself. I chose not to implement it on the home page and results areas as I felt using call-to-action buttons was the better choice, visually, for these pages.
 The bar contains an active feature when on the About page, however this is not included when the user is in the quiz area as the button which links to the quiz is changed from saying 'The Quiz,' in the About page, to 'Restart Quiz,' and thus having an active bar on the link may cause confusion.
@@ -128,7 +129,7 @@ The results area displays once the final question has been answered. The relevan
 
 - Originally, the results area was a separate page called results.html. This was changed so the results area was part of the main game.html content as it prevents users from simply being able to enter the URL for the results area and reach it without first needing to complete the quiz.
 
-## Future Instalments
+## **Future Instalments**
 
 - I will likely add many more questions in the future to really fill out the quiz game. Once this has begun, I will add a highscores page so users can keep track of how they have been doing.
     - I chose not to include a highscores page at the current stage as there are only eleven (11) questions, and I wanted to focus more on providing information and context for the quiz.
@@ -137,6 +138,8 @@ The results area displays once the final question has been answered. The relevan
 
 - I ensured the site is responsive across all screensizes using media queries, and checked this using DevTools and my own devices of various sizes
 - I ensured the site is accessible using DevTools' Lighthouse feature and the site [PowerMapper](https://www.powermapper.com/) to provide detailed information
+
+![Website Mockup](docs/website-mockup.png)
 
 ## **Deployment and Cloning**
 
@@ -168,9 +171,9 @@ To clone this site and run it locally on your device:
 
 - [Minas Tirith background image](https://screenrant.com/lord-of-the-rings-interesting-facts-trivia-minas-tirith/)
 - [Background Info accompanying image](http://www.thehorrorzine.com/Odd/TolkienHome/TolkienHome.html)
-- [FoTR accompanying image](https://www.pinterest.co.uk/pin/239746380150934555/)
-- [TT accompanying image](https://www.quotev.com/story/12040470/No-Blood-Just-Love-Lord-of-the-Rings/6)
-- [RoTK accompanying image](https://www.youtube.com/watch?v=WJR78B7BaUQ)
+- [Fellowship of The Ring accompanying image](https://www.pinterest.co.uk/pin/239746380150934555/)
+- [The Two Towers accompanying image](https://www.quotev.com/story/12040470/No-Blood-Just-Love-Lord-of-the-Rings/6)
+- [Return of The King accompanying image](https://www.youtube.com/watch?v=WJR78B7BaUQ)
 
 ### **Other Special Mentions**
 
