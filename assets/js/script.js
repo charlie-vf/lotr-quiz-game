@@ -168,7 +168,8 @@ function getNewQuestion() {
     question.innerText = currentQuestion.question;
 
     // dataset refers to the data-number from the game.html file
-    // declares which choice we are clicking on
+    // declares which choice the user is selecting
+    // tutorial for forEach: https://www.w3schools.com/jsref/jsref_forEach.asp
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];

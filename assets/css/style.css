@@ -86,20 +86,6 @@ h2 {
     transform: none;
 }
 
-.restart-btn {
-    font-size: 2rem;
-    padding: 2rem 0;
-    width: 20rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin: -65px 0px 0px 50px;
-    text-decoration: none;
-    color: rgb(214, 194, 244);
-    background: linear-gradient(90deg, rgba(26,9,165,1) 9%, rgba(54,16,140,1) 43%, rgba(155,88,215,1) 100%);
-    border-radius: 5px;
-    display: block;
-}
-
 /* Header */
 
 header a {
@@ -153,7 +139,7 @@ header a:hover {
 }
 
 #about-container p {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     line-height: 2.2rem;
 }
 
@@ -167,6 +153,7 @@ header a:hover {
 
 .abt-h2 {
     grid-area: abt-h2;
+    font-size: 3.5rem;
     text-align: center;
     color: rgb(108, 9, 221);
     text-transform: uppercase;
@@ -180,30 +167,28 @@ header a:hover {
 .jrr {
     grid-area: jrr;
     background: url('../images/bg-info-accompanying-image.jpeg') no-repeat center center;
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
+    background-size: cover;
     margin: 0 1.5rem
 }
 
 .fpic {
     grid-area: fpic;
     background: url('../images/fotr-acompanying-image.jpeg') no-repeat center center;
-    background-size: 150%;
+    background-size: cover;
     margin: 0 1.5rem
 }
 
 .tpic {
     grid-area: tpic;
     background: url('../images/tt-acompanying-image.jpeg') no-repeat center center;
-    background-size: 150%;
+    background-size: cover;
     margin: 0 1.5rem
 }
 
 .rpic {
     grid-area: rpic;
     background: url('../images/rotk-accompanying-image.jpeg') no-repeat center center;
-    background-size: 150%;
+    background-size: cover;
     margin: 0 1.5rem
 }
 

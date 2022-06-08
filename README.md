@@ -51,7 +51,7 @@ The main color scheme of this site is purple:
 - The options buttons are slightly darker: rgb(185, 123, 244)
 - The headings are darker: rgb(126, 82, 237)
 
-The font color is either black or white, dependent on which is best for accessibility
+Other text is either black or white, dependent on which is best for accessibility
 
 ### **Imagery**
 
@@ -139,6 +139,8 @@ The results area displays once the final question has been answered. The relevan
 - I ensured the site is responsive across all screensizes using media queries, and checked this using DevTools and my own devices of various sizes
 - I ensured the site is accessible using DevTools' Lighthouse feature and the site [PowerMapper](https://www.powermapper.com/) to provide detailed information
 
+![Accesibility Rating](docs/accessibility-ss.png)
+
 ![Website Mockup](docs/website-mockup.png)
 
 ## **Deployment and Cloning**
@@ -163,18 +165,18 @@ To clone this site and run it locally on your device:
 
 ### **Sites Which Helped Me Out**
 
-- [This Playlist]('https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx') taught me how to design the Question Counter in the HUD, how to create and call on CSS to color a selected answer based on its accuracy and introduced me to the TimeOut feature.
+- [This Playlist](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) taught me how to design the Question Counter in the HUD, how to create and call on CSS to color a selected answer based on its accuracy and introduced me to the TimeOut feature.
     - I referred to this playlist throughout the production of my quiz if something was not working as intended
-- [This Site]('https://en.wikipedia.org/wiki/Adaptations_of_The_Lord_of_the_Rings') gave me the release dates for different adapations of the series
-- [This Site]('https://www.w3schools.com/jsref/jsref_forEach.asp) taught me about using forEach to call a function for elements in an array 
+- [This Site](https://en.wikipedia.org/wiki/Adaptations_of_The_Lord_of_the_Rings) gave me the release dates for different adapations of the series
+- [This Site](https://www.w3schools.com/jsref/jsref_forEach.asp) taught me about using forEach to call a function for elements in an array 
 
 ### **Image Sources**
 
 - [Minas Tirith background image](https://screenrant.com/lord-of-the-rings-interesting-facts-trivia-minas-tirith/)
 - [Background Info accompanying image](http://www.thehorrorzine.com/Odd/TolkienHome/TolkienHome.html)
 - [Fellowship of The Ring accompanying image](https://www.pinterest.co.uk/pin/239746380150934555/)
-- [The Two Towers accompanying image](https://www.quotev.com/story/12040470/No-Blood-Just-Love-Lord-of-the-Rings/6)
-- [Return of The King accompanying image](https://www.youtube.com/watch?v=WJR78B7BaUQ)
+- [The Two Towers accompanying image](https://www.youtube.com/watch?v=WJR78B7BaUQ)
+- [Return of The King accompanying image](https://www.quotev.com/story/12040470/No-Blood-Just-Love-Lord-of-the-Rings/6)
 
 ### **Other Special Mentions**
 
