@@ -166,6 +166,7 @@ To clone this site and run it locally on your device:
 - [This Playlist]('https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx') taught me how to design the Question Counter in the HUD, how to create and call on CSS to color a selected answer based on its accuracy and introduced me to the TimeOut feature.
     - I referred to this playlist throughout the production of my quiz if something was not working as intended
 - [This Site]('https://en.wikipedia.org/wiki/Adaptations_of_The_Lord_of_the_Rings') gave me the release dates for different adapations of the series
+- [This Site]('https://www.w3schools.com/jsref/jsref_forEach.asp) taught me about using forEach to call a function for elements in an array 
 
 ### **Image Sources**
 

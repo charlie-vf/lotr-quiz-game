@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/game.css">
-    <title>Lord of The Rings Quiz! - The Quiz</title>
+    <title>Lord of The Rings Quiz!</title>
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
+    <!-- Header -->
 
     <header>
         <a href="index.html">
@@ -31,9 +31,8 @@
     </header>
 
     <!-- Main game div -->
-
-    <div class="container hide">
-        <div class="justify-center flex-column">
+    <div class="container hide" id="game-page">
+        <div id="game" class="justify-center flex-column">
             <div id="hud">
                 <div class="hud-item">
                     <p id="progressText" class="hud-prefix">
@@ -75,7 +74,6 @@
     </div>
     
     <!-- Results page -->
-
     <div class="container hide" id="results-page">
         <div id="results" class="flex-center flex-column">
             <h1 class="results-h1">You scored: <span class="results-h1" id="final-score"></span>!</h1>
