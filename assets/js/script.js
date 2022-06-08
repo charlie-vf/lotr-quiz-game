@@ -1,12 +1,11 @@
 // Content of main game div
 const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
+const options = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 
 // Results page
-const playerName = document.getElementById('name');
 const finalScore = document.getElementById('final-score');
 const finalScoreQuote = document.getElementById('results-quote');
 
@@ -167,10 +166,12 @@ function getNewQuestion() {
     currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question;
 
+    // options is a created array from the choice-text in the game.html file
     // dataset refers to the data-number from the game.html file
+    // choice refers to the choice lists from the questions array
     // declares which choice the user is selecting
     // tutorial for forEach: https://www.w3schools.com/jsref/jsref_forEach.asp
-    choices.forEach(choice => {
+    options.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     })
@@ -179,7 +180,7 @@ function getNewQuestion() {
     acceptingAnswers = true;
 }
 
-choices.forEach(choice => {
+options.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
 
@@ -198,7 +199,7 @@ choices.forEach(choice => {
         // Displays the css for correct or incorrect
         selectedChoice.parentElement.classList.add(answerAccuracy);
 
-        // Allows 500ms after selecting an answer so user can see the result before the next question displays
+        // Allows 500ms after selecting an answer so user can see the result before calling the getNewQuestion function
         // Removes css for correct or incorrect until new answer selected
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(answerAccuracy);
