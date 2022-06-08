@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Oxanium:wght@300&display=swap');
 
+#question {
+    font-size: 2.5rem;
+    color: rgb(108, 9, 221);
+    text-align: center;
+}
+
 .container {
     background: url('../images/minas-tirith-container-image.jpeg') no-repeat center center;
     height: 70rem;
@@ -40,12 +46,6 @@
     background: rgb(255, 85, 0);
 }
 
-#question {
-    font-size: 2.5rem;
-    color: rgb(108, 9, 221);
-    text-align: center;
-}
-
 /* Heads up Display */
 
 #hud {
@@ -81,6 +81,8 @@
     /* Makes the bar empty to begin with */
     width: 0%;
 }
+
+/* Media Queries */
 
 @media screen and (max-width: 920px) {
     .questions-container {

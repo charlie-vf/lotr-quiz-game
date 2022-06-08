@@ -21,6 +21,7 @@ h1 {
 h2 {
     font-size: 4rem;
     margin-bottom: 4rem;
+    text-align: center;
 }
 
 .home-h2 {
@@ -54,9 +55,13 @@ h2 {
     justify-content: center;
 }
 
+/* Allows hide and display of quiz and results areas */
+
 .hide {
     display: none;
 }
+
+/* Buttons */
 
 .btn {
     font-size: 2.4rem;
@@ -95,13 +100,7 @@ h2 {
     display: block;
 }
 
-/* About LoTR page */
-
-#lotr {
-    text-align: center;
-    padding-top: 15px;
-    margin-bottom: 3rem;
-}
+/* Header */
 
 header a {
     text-decoration: none;
@@ -110,6 +109,12 @@ header a {
 
 header a:hover {
     text-decoration: underline;
+}
+
+#lotr {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 3rem;
 }
 
 #menu {
@@ -122,6 +127,8 @@ header a:hover {
 .active {
     text-decoration: underline;
 }
+
+/* About LoTR Page */
 
 #about-container {
     width: 100%;
@@ -150,7 +157,7 @@ header a:hover {
     line-height: 2.2rem;
 }
 
-#about-box {
+.about-box {
     border: 1px solid rgb(126, 82, 237);
     border-radius: 10px;
     max-width: 95%;
@@ -273,6 +280,16 @@ hr {
         display: none;
     }
 }
-    
 
+/* For smaller screens up to 900px */
 
+@media screen and (max-width: 900px) {
+    #about-container {
+        grid-template-areas: 
+        'abt-h2 abt-h2 abt-h2 abt-h2 abt-h2 abt-h2'
+        'bg-info bg-info bg-info bg-info bg-info bg-info'
+        'fotr fotr fotr fotr fotr fotr'
+        'tt tt tt tt tt tt'
+        'rotk rotk rotk rotk rotk rotk';
+    }
+}
